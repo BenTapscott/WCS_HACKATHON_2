@@ -19,7 +19,7 @@ seller_level = st.sidebar.selectbox('Choose seller level',
 
 st.subheader('Show DF filtered')
 
-df_nlp.loc[(df_nlp['seller_level']=seller_level)]
+df_nlp.loc[(df_nlp['seller_level']==seller_level)]
 
 
 #df_nlp
