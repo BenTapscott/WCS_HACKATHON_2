@@ -28,11 +28,11 @@ df_nlp.loc[(df_nlp['seller_level']==seller_level) & (df_nlp['tf_idf'].str.contai
 
 plt.style.use('dark_background')
 
-fig, ax = plt.subplots(figsize=(18,8))
+fig, ax = plt.subplots(figsize=(18,14))
 ax.hist(df_nlp['len_description_content'].loc[(df_nlp['seller_level']==seller_level) & (df_nlp['tf_idf'].str.contains(search_term))]);
 ax.plot( linewidth=1);
 ax.set_title('length of gig description');
-ax.set_xlabel('Number of words')
+ax.set_xlabel('Number of characters')
 ax.set_ylabel('Number of gigs');
 st.pyplot(fig)
 
