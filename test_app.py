@@ -21,6 +21,6 @@ st.subheader('Show DF filtered')
 
 df_nlp.loc[(df_nlp['seller_level']==seller_level)]
 
-title = st.sidebar.text_input('Search for key words', 'website design')
-st.write('The current movie title is', title)
+search_term = st.sidebar.text_input('Search for key words', 'website design')
+st.write('Current search term is :', search_term)
 #df_nlp
