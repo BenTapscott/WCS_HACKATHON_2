@@ -36,5 +36,12 @@ ax.set_xlabel('Number of characters')
 ax.set_ylabel('Number of gigs');
 st.pyplot(fig)
 
+fig, ax = plt.subplots(figsize=(18,14))
+sns.set_theme(style="darkgrid")
+plt.title ("COUNTRIES")
+plt.xticks(rotation=45)
+ax = sns.countplot(x="user_country", data=df_nlp)
+st.pyplot(fig)
+
 #df_nlp
 
