@@ -40,7 +40,7 @@ fig, ax = plt.subplots(figsize=(18,14))
 sns.set_theme(style="darkgrid")
 plt.title ("COUNTRIES")
 plt.xticks(rotation=45)
-ax = sns.countplot(x="user_country", data=df_nlp)
+ax = sns.countplot(x="user_country", data=df_nlp.loc[(df_nlp['seller_level']==seller_level) & (df_nlp['tf_idf'].str.contains(search_term))])
 st.pyplot(fig)
 
 #df_nlp
