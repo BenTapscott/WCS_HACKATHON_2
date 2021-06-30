@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 
 import seaborn as sns
 
+import plotly.graph_objects as go
 
 st.title('Welcome to the Fiverr Seller Advisor')
 
