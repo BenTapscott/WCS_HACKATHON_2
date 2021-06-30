@@ -8,6 +8,7 @@ st.title('Welcome to our app')
 
 st.write("Select the gig")
 
+st.sidebar.header('User Input Parameters')
 
 link = "https://raw.githubusercontent.com/BenTapscott/WCS_HACKATHON_2/main/df_nlp.csv"
 
