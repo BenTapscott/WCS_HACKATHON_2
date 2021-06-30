@@ -22,5 +22,12 @@ st.subheader('Data with filters applied : ')
 
 df_nlp.loc[(df_nlp['seller_level']==seller_level) & (df_nlp['tf_idf'].str.contains(search_term))]
 
+fig, ax = plt.subplots(figsize=(18,8))
+ax.hist(df_nlp['len_description_content'].loc[(df_nlp['seller_level']==seller_level) & (df_nlp['tf_idf'].str.contains(search_term))],  density=True);
+ax.plot( linewidth=1);
+ax.set_title('len description');
+ax.set_xlabel('Number of words');
+plt.show()
+
 #df_nlp
 
