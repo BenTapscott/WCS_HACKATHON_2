@@ -14,23 +14,16 @@ link = "https://raw.githubusercontent.com/BenTapscott/WCS_HACKATHON_2/main/df_nl
 
 df_nlp = pd.read_csv(link)
 
-seller_level = st.selectbox('Choose seller level',
-        ('Top Rated Seller', 'Level 1 Seller','Level 2 Seller'))
-
-st.write('You selected:', seller_level)
-
-"""
 def user_input_features():
     seller_level = st.selectbox('Choose seller level',
         ('Top Rated Seller', 'Level 1 Seller','Level 2 Seller'))
-
-    data = {'Top Rated Seller': 'Top Rated Seller',
-            'Level 1 Seller': 'Level 1 Seller',
-             'Level 2 Seller' : 'Level 2 Seller'   
-              features = pd.DataFrame(data, index=[0])
+    
+    features = pd.DataFrame(df_nlp['seller_level'] == seller_level)
     return features
-"""
 
-# Here we use "magic commands":
+df = user_input_features()
+
+st.subheader('Show DF filtered')
+st.write(df)
 
 #df_nlp
