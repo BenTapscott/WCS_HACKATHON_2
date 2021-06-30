@@ -19,8 +19,10 @@ seller_level = st.sidebar.selectbox('Choose seller level',
 
 st.subheader('Show DF filtered')
 
-df_nlp.loc[(df_nlp['seller_level']==seller_level)]
-
 search_term = st.sidebar.text_input('Search for key words', 'website design')
 st.write('Current search term is :', search_term)
+
+df_nlp.loc[(df_nlp['seller_level']==seller_level) & df_nlp['tf_idf'].isin(search_term)]
+
 #df_nlp
+
