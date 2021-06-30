@@ -23,7 +23,7 @@ search_term = st.sidebar.text_input('Search for key words', 'website design')
 
 st.write('Current search term is :', search_term)
 
-df_nlp.loc[(df_nlp['seller_level']==seller_level) & (df_nlp['tf_idf'].isin(search_term))]
+df_nlp.loc[(df_nlp['seller_level']==seller_level) & (df_nlp['tf_idf'].str.contains(search_term))]
 
 #df_nlp
 
