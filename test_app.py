@@ -2,6 +2,8 @@ import streamlit as st
 
 import pandas as pd
 
+import matplotlib.pyplot as plt
+
 
 st.title('Welcome to the Fiverr Seller Advisor')
 
@@ -27,7 +29,7 @@ ax.hist(df_nlp['len_description_content'].loc[(df_nlp['seller_level']==seller_le
 ax.plot( linewidth=1);
 ax.set_title('len description');
 ax.set_xlabel('Number of words');
-plt.show()
+st.pyplot()
 
 #df_nlp
 
